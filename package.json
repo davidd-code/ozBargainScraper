@@ -1,0 +1,19 @@
+{
+  "name": "ozbargainscraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidd11/ozBargainScraper.git"
+  },
+  "author": "David Doan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidd11/ozBargainScraper/issues"
+  },
+  "homepage": "https://github.com/davidd11/ozBargainScraper#readme"
+}
