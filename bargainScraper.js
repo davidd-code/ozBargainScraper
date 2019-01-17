@@ -5,7 +5,7 @@ const url = 'https://ozbargain.com.au';
 
 rp(url)
   .then(function(html){
-    //success
+    //process html
     //create array to hold titles
     var dataTitles = [];
     //loop through all of the titles and push them to the array
@@ -15,5 +15,6 @@ rp(url)
     console.log(dataTitles);
   })
   .catch(function(err){
+    //crawling failed
     console.log(err);
   });
