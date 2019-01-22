@@ -1,5 +1,7 @@
-var rp      = require('request-promise'),
-    cheerio = require('cheerio');
+var rp          = require('request-promise'),
+    cheerio     = require('cheerio'),
+    mongoose    = require('mongoose'),
+    Item        = require('./models/item');
 
 const url = 'https://ozbargain.com.au';
 
@@ -18,3 +20,24 @@ rp(url)
     //crawling failed
     console.log(err);
   });
+
+function bargainScraper(){
+    Item.remove({}, function(err){
+        if(err){
+            console.log(err);
+        } else {
+            dataTitles.forEach(function(title){
+                Item.create(title, function(err, item){
+                    if(err){
+                        console.log(err);
+                    } else {
+                        item.save();
+                        console.log("Created new item");
+                    }
+                });
+            });
+        }
+    }):
+}
+
+module.exports = bargainScraper();
