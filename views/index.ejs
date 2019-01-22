@@ -14,10 +14,9 @@
     </div>
 
     <div class="row text-center" style="display:flex; flex-wrap:wrap;">
-        <% campgrounds.forEach(function(campground){ %>
-            <div class="col-md-3 col-sm-6">
-                <div>
-                </div>
+        <% items.forEach(function(item){ %>
+            <div>
+                <%= item.title %>
             </div>
         <% }); %>
     </div>
