@@ -1,25 +1,27 @@
-<% include ../partials/header %>
+<% include ./partials/header %>
     <div class="container">
     <header class="jumbotron">
         <div class="container">
             <h1>OzBargain Scraper!</h1>
-            <p>Here are the titles from OzBargain today</p>
+            <p>My first ever web scraping application</p>
         </div>
     </header>
 
     <div class="row">
         <div class="col-lg-12">
-            <h3>Our Most Popular Campgrounds</h3>
+            <h3>Here are the titles from OzBargain today</h3>
         </div>
     </div>
 
     <div class="row text-center" style="display:flex; flex-wrap:wrap;">
-        <% items.forEach(function(item){ %>
-            <div>
-                <%= item.title %>
-            </div>
-        <% }); %>
+        <ul>
+            <% items.forEach(function(item){ %>
+                <li>
+                    <%= item.title %>
+                </li>
+            <% }); %>
+        </ul>
     </div>
 </div>
 
-<% include ../partials/footer %>
+<% include ./partials/footer %>

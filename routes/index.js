@@ -1,10 +1,10 @@
 var express = require('express'),
     router  = express.Router(),
     Item    = require("../models/item"),
-    bargainScraper = require('../bargainScraper');
+    bargainScraper = require('./../bargainScraper');
 
 router.get("/", function(req, res){
-    bargainSCraper();
+    // bargainScraper();
     //get all titles from ozBargain
     Item.find({}, function(err, allItems){
         if(err){
