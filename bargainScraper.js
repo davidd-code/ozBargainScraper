@@ -12,7 +12,7 @@ rp(url)
     var dataTitles = [];
     //loop through all of the titles and push them to the array
     for(let i = 0; i < 30; i++) {
-      dataTitles.push(cheerio('h2[class="title"]', html)[i].attribs['data-title']);
+      dataTitles.push(title: cheerio('h2[class="title"]', html)[i].attribs['data-title']);
     }
     console.log(dataTitles);
   })
