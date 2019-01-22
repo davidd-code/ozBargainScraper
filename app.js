@@ -1,8 +1,13 @@
-var express = require('express'),
-    app     = express();
+var express     = require('express'),
+    app         = express(),
+    mongoose    = require('mongoose'),
+    bScraper    = require('./bargainScraper.js');
 
 //routes
 var indexRoutes = require('./routes/index.js');
+
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/ozbargain_scraper"
+mongoose.connect(url, {useNewUrlParser: true});
 
 app.set("view engine", "ejs");
 
