@@ -16,14 +16,12 @@ function bargainScraper(){
         for(let i = 0; i < 20; i++) {
             var newTitle = {title: $('.node-ozbdeal h2', html)[i].attribs['data-title']};
             dataTitles.push(newTitle);
-            console.log(newTitle);
         }
         
         Item.remove({}, function(err){
             if(err){
                 console.log(err);
             } else {
-                console.log(dataTitles);
                 dataTitles.forEach(function(thisTitle){
                     Item.create(thisTitle, function(err, item){
                         if(err){
