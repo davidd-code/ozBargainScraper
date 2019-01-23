@@ -9,7 +9,8 @@ var express     = require('express'),
 var indexRoutes = require('./routes/index.js');
 
 var url = process.env.DATABASEURL || "mongodb://localhost:27017/ozbargain_scraper"
-mongoose.connect(url, {useNewUrlParser: true});
+// mongoose.connect(url, {useNewUrlParser: true});
+mongoose.connect(url, {useMongoClient: true});
 
 app.set("view engine", "ejs");
 
