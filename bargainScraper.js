@@ -17,20 +17,18 @@ function bargainScraper(){
             var newTitle = {title: $('.node-ozbdeal h2', html)[i].attribs['data-title']};
             dataTitles.push(newTitle);
         }
-        
+        console.log('here')
         Item.remove({}, function(err){
             if(err){
                 console.log(err);
             } else {
+                console.log('here???')
                 dataTitles.forEach(function(thisTitle){
                     Item.create(thisTitle, function(err, item){
                         if(err){
                             console.log(err);
-                        } else {
-                            item.save();
                         }
                         item.save();
-                        
                     });
                 });
             }

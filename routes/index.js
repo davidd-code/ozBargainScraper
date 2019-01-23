@@ -1,7 +1,6 @@
 var express = require('express'),
     router  = express.Router(),
-    Item    = require("../models/item"),
-    bargainScraper = require('./../bargainScraper');
+    Item    = require("../models/item");
 
 router.get("/", function(req, res){
     // bargainScraper();
